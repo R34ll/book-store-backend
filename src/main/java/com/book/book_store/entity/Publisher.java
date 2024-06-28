@@ -20,7 +20,7 @@ public class Publisher {
 
     private String name;
 
-    @OneToMany(mappedBy = "publisher")
+    @OneToMany(mappedBy = "publisher_id")
     private List<Book> books;
 
     public long getId() {

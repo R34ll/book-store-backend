@@ -19,7 +19,7 @@ public class Author {
 
     private String name;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author_id")
     private List<Book> books;
 
     public long getId() {
