@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import com.book.book_store.enums.Genre;
 import com.book.book_store.enums.Language;
 
-public class BookDto { // Book data transfer object (DTO)
+public class BookDto { 
     private Long id;
     private String title;
     private int n_pages;
@@ -13,8 +13,8 @@ public class BookDto { // Book data transfer object (DTO)
     private Genre genre;
     private Language language;
     private LocalDate publication_date;
-    private Long publisher_id;
-    private Long author_id;
+    private String publisher;
+    private String author;
 
     
     public Long getId() {
@@ -59,17 +59,17 @@ public class BookDto { // Book data transfer object (DTO)
     public void setPublication_date(LocalDate publication_date) {
         this.publication_date = publication_date;
     }
-    public Long getPublisher_id() {
-        return publisher_id;
+    public String getPublisher() {
+        return publisher;
     }
-    public void setPublisher_id(Long publisher_id) {
-        this.publisher_id = publisher_id;
+    public void setPublisher(String publisher_id) {
+        this.publisher = publisher_id;
     }
-    public Long getAuthor_id() {
-        return author_id;
+    public String getAuthor() {
+        return author;
     }
-    public void setAuthor_id(Long author_id) {
-        this.author_id = author_id;
+    public void setAuthor(String author_id) {
+        this.author = author_id;
     }
     
     
