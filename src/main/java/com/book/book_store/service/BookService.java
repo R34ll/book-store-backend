@@ -46,8 +46,8 @@ public class BookService {
         dto.setGenre(book.getGenre());
         dto.setLanguage(book.getLanguage());
         dto.setPublication_date(book.getPublicationDate());
-        dto.setPublisher(book.getPublisher_id().getName());
-        dto.setAuthor(book.getAuthor_id().getName());
+        dto.setPublisher_id(book.getPublisher_id().getId());
+        dto.setAuthor_id(book.getAuthor_id().getId());
         return dto;
     }
 
