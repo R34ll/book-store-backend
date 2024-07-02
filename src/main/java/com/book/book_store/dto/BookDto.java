@@ -13,8 +13,8 @@ public class BookDto { // Book data transfer object (DTO)
     private Genre genre;
     private Language language;
     private LocalDate publication_date;
-    private Long publisher_id;
-    private Long author_id;
+    private String publisher_id;
+    private String author_id;
 
     
     public Long getId() {
@@ -59,17 +59,18 @@ public class BookDto { // Book data transfer object (DTO)
     public void setPublication_date(LocalDate publication_date) {
         this.publication_date = publication_date;
     }
-    public Long getPublisher_id() {
-        return publisher_id;
+ 
+    public void setPublisher(String name) {
+        this.publisher_id = name;
     }
-    public void setPublisher_id(Long publisher_id) {
-        this.publisher_id = publisher_id;
+    public void setAuthor(String name) {
+        this.author_id = name;
     }
-    public Long getAuthor_id() {
-        return author_id;
+    public String getPublisher() {
+        return this.publisher_id;
     }
-    public void setAuthor_id(Long author_id) {
-        this.author_id = author_id;
+    public String getAuthor() {
+        return this.author_id;
     }
     
     
