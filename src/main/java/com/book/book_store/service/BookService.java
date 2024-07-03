@@ -53,7 +53,7 @@ public class BookService {
     
         if(repository.existsById(id)){
             repository.deleteById(id);
-            return new ResponseEntity<>("Book deleted successfully", HttpStatus.OK);
+            return new ResponseEntity<>("Book successfully deleted.", HttpStatus.OK);
         }else{
             return new ResponseEntity<>("Book not found", HttpStatus.NOT_FOUND);
         }
