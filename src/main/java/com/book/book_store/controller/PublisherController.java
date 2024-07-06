@@ -24,12 +24,12 @@ public class PublisherController {
     private PublisherService service;
 
     @GetMapping("/")
-    List<PublisherDto> listAll(){
+    ResponseEntity<List<PublisherDto>> listAll(){
         return service.listAll();
     }
 
     @GetMapping("/{id}")
-    PublisherDto listById(@PathVariable long id){
+    ResponseEntity<PublisherDto> listById(@PathVariable long id){
         return service.listById(id);
     }
 

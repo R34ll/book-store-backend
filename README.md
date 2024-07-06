@@ -1,6 +1,5 @@
 # Book Store Backend
 
-
 This project implements a backend API for a Book Store using Spring Boot. The objective is to simulate a real-world example of a robust and secure backend. It follows Clean Architecture principles to manage books, authors, and publishers, ensuring scalable and maintainable code.
 
 

@@ -28,7 +28,7 @@ public class BookController {
      * Retrive from database all books.
      */
     @GetMapping("/")
-    List<BookDto> listAll(){
+    ResponseEntity<List<BookDto>> listAll(){
         return service.listAll();
     }
     /*
@@ -45,7 +45,7 @@ public class BookController {
      * Retrive from database the book associated with given ID.
      */
     @GetMapping("/{id}")
-    BookDto listById(@PathVariable long id){
+    ResponseEntity<BookDto> listById(@PathVariable long id){
         return service.listById(id);
     }
 

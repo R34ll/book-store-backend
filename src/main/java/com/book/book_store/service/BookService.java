@@ -32,20 +32,24 @@ public class BookService {
     @Autowired
     private AuthorRepository authorRepository;
     
-    public List<BookDto> listAll(){
+    public ResponseEntity<List<BookDto>> listAll(){
         List<Book> books = repository.findAll();
 
-        return books.stream()
+        List<BookDto> dto = books.stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
 
+        return new ResponseEntity<>(dto, HttpStatus.OK);
+
     }
-    public BookDto listById(@PathVariable long id){
+    public ResponseEntity<BookDto> listById(@PathVariable long id){
         Optional<Book> book = repository.findById(id);
 
-        return book
+        BookDto dto = book
             .map(this::convertToDto)
             .orElse(null);
+
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
 

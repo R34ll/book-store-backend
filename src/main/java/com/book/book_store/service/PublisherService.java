@@ -24,17 +24,20 @@ public class PublisherService {
     @Autowired
     private BookService bookService;
     
-    public List<PublisherDto> listAll(){
+    public ResponseEntity<List<PublisherDto>> listAll(){
         List<Publisher> publishers = repository.findAll();
     
-        return publishers.stream().map(this::convertToDto).collect(Collectors.toList());
+        List<PublisherDto> dto =  publishers.stream().map(this::convertToDto).collect(Collectors.toList());
+    
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
 
-    public PublisherDto listById(@PathVariable long id){
+    public ResponseEntity<PublisherDto> listById(@PathVariable long id){
         Optional<Publisher> publisher = repository.findById(id);
 
-        return publisher.map(this::convertToDto).orElse(null);
+        PublisherDto dto = publisher.map(this::convertToDto).orElse(null);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
 

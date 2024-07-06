@@ -25,12 +25,12 @@ public class AuthorController {
     private AuthorService service;
 
     @GetMapping("/")
-    List<AuthorDto> listAll(){
+    ResponseEntity<List<AuthorDto>> listAll(){
         return service.listAll();
     }
 
     @GetMapping("/{id}")
-    AuthorDto listById(@PathVariable long id){
+    ResponseEntity<AuthorDto> listById(@PathVariable long id){
         return service.listById(id);
     }
 

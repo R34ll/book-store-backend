@@ -27,18 +27,21 @@ public class AuthorService {
     private BookService bookService;
 
 
-    public List<AuthorDto> listAll(){
+    public ResponseEntity<List<AuthorDto>> listAll(){
         List<Author> author = repository.findAll();
 
-        return author.stream()
+        List<AuthorDto> dto =  author.stream()
             .map(this::convertToDto)
             .collect(Collectors.toList());
+
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
-    public AuthorDto listById(@PathVariable long id){
+    public ResponseEntity<AuthorDto> listById(@PathVariable long id){
         Optional<Author> author = repository.findById(id);
 
-        return author.map(this::convertToDto).orElse(null);
+        AuthorDto dto = author.map(this::convertToDto).orElse(null);
+        return new ResponseEntity<>(dto, HttpStatus.OK);
     }
 
 
