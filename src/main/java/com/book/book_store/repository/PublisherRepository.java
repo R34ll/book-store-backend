@@ -4,7 +4,6 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.book.book_store.entity.Author;
 import com.book.book_store.entity.Publisher;
 
 public interface PublisherRepository extends JpaRepository<Publisher, Long>{

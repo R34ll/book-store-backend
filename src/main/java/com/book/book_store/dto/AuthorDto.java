@@ -7,8 +7,6 @@ public class AuthorDto {
     private String name;
     private List<BookDto> books;
 
-    
-
     public Long getId() {
         return id;
     }

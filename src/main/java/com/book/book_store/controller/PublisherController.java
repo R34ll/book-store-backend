@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.book.book_store.dto.PublisherDto;
-import com.book.book_store.entity.Publisher;
 import com.book.book_store.service.PublisherService;
 
 @RestController

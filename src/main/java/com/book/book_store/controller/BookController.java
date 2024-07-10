@@ -1,6 +1,5 @@
 package com.book.book_store.controller;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.book.book_store.dto.BookDto;
-import com.book.book_store.entity.Book;
 import com.book.book_store.service.BookService;
 
 @RestController
